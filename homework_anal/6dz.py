@@ -18,15 +18,15 @@
 # значения которых принадлежат заданному диапазону 
 # (т.е. не меньше заданного минимума и не болше заданного максимума)
 
-import random
-list_1=[]
-n= int(input("Введите число: "))
-for i in range (n):
-    list_1.append(random.randint(0,10))
-print(list_1)
-max1= int(input("Введите max число: "))
-min1= int(input("Введите min число: "))
-for i in range(len(list_1)):
-    if min1<list_1[i]<max1:
-        print(i)
-        
+# import random
+# list_1=[]
+# n= int(input("Введите число: "))
+# for i in range (n):
+#     list_1.append(random.randint(0,10))
+# print(list_1)
+# max1= int(input("Введите max число: "))
+# min1= int(input("Введите min число: "))
+# for i in range(len(list_1)):
+#     if min1<list_1[i]<max1:
+#         print(i)
+

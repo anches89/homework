@@ -28,19 +28,19 @@
 # может собрать за один заход собирающий модуль, находясь перед некоторым 
 # кустом заданной во входном файле грядки.
 
-import random
-N= int (input("Введите количество кустов: "))
-rand_list=[]
-for i in range (N):
-    rand_list.append(random.randint(3,9))
-print(rand_list)
-sum1=0
-i=0
-for i in range (len(rand_list)-1):
-    if(rand_list[i-1]+rand_list[i]+rand_list[i+1])>sum1:
-        sum1=rand_list[i-1]+rand_list[i]+rand_list[i+1]
-sum2=rand_list[0]+rand_list[-1]+rand_list[-2]
-if sum1>sum2:
-    print(sum1)
-else:
-    print(sum2)
+# import random
+# N= int (input("Введите количество кустов: "))
+# rand_list=[]
+# for i in range (N):
+#     rand_list.append(random.randint(3,9))
+# print(rand_list)
+# sum1=0
+# i=0
+# for i in range (len(rand_list)-1):
+#     if(rand_list[i-1]+rand_list[i]+rand_list[i+1])>sum1:
+#         sum1=rand_list[i-1]+rand_list[i]+rand_list[i+1]
+# sum2=rand_list[0]+rand_list[-1]+rand_list[-2]
+# if sum1>sum2:
+#     print(sum1)
+# else:
+#     print(sum2)
