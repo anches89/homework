@@ -12,7 +12,7 @@
 import functions
 
 while True:
-    print('1. вывод, 2. добавление, 3. поиск')
+    print('1. вывод, 2. добавление, 3. поиск, 4. удаление контакта, 5. замена данных')
     mode = int(input())
     if mode == 1:
         functions.show_data()
@@ -20,14 +20,9 @@ while True:
         functions.add_data()
     elif mode == 3:
         functions.find_data()
+    elif mode == 4:
+        functions.delete_person()
+    elif mode == 5:
+        functions.change_person()
     else:
         break
-
-# with open('book.txt', 'r', encoding='utf-8') as f:
-#     f.write('фио | номер телефона')
-
-# with open('book.txt', 'a', encoding='utf-8') as f:
-#     f.write('\nфио1 | номер телефона1')
-
-# with 
-#     print(f.read())

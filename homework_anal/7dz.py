@@ -7,11 +7,11 @@
 # напишите “Парам пам-пам”, если с ритмом все в порядке и “Пам парам”, если с ритмом все не
 # в порядке
 
-_list = [len([i for i in el if i.lower() in "уеёэоаыяию"]) for el in input('Введи стишок Винни Пуха: ').split()]
-if all([i == _list[0] for i in _list]):
-    print("Парам пам-пам")
-else:
-    print("Пам парам")
+# _list = [len([i for i in el if i.lower() in "уеёэоаыяию"]) for el in input('Введи стишок Винни Пуха: ').split()]
+# if all([i == _list[0] for i in _list]):
+#     print("Парам пам-пам")
+# else:
+#     print("Пам парам")
 
 # Задача 36: Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
 # которая принимает в качестве аргумента функцию, вычисляющую элемент по номеру строки и
