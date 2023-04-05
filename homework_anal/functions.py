@@ -24,20 +24,22 @@ def search(book: str, info:str) -> str:
     book= book.split('\n')
     return  '\n'.join([post for post in book if info in post])
 
-def delete_person(name):
+def delete_person() -> None:
     '''Удаляет данные'''
-    persons = read_data()
-    with open("data.txt", "w", encoding="utf8" ) as file:
-        for person in persons:
-            if name != person:
-                file.write(person) 
+    data = input('Кого удаляем?: ')
+    with open("book.txt", "r", encoding="utf8" ) as f:
+        tel_book = f.readlines()
+    with open("book.txt", "w", encoding="utf8" ) as f:
+        for person in tel_book:
+            if person!=data:
+                f.write(person)
 
-def change_person(new_name, old_name):
+def change_person() -> None:
     '''Изменяет данные'''
-    persons = read_data()
-    with open("data.txt", "w", encoding="utf8" ) as file:
-        for person in persons:
-            if  old_name != person:
-                file.write(person)
-            else:
-                file.write(new_name + "\n")
+    old_name = input('Кого хотим переименовать?: ')
+    new_name = input('Как хотим его назвать?: ')
+    with open("book.txt", "r", encoding="utf8" ) as f:
+        old_data = f.read()
+    new_data=old_data.replace(old_name, new_name)
+    with open("book.txt", "w", encoding="utf8" ) as f:
+        f.write(new_data)
