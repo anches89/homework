@@ -23,3 +23,21 @@ def find_data() -> None:
 def search(book: str, info:str) -> str:
     book= book.split('\n')
     return  '\n'.join([post for post in book if info in post])
+
+def delete_person(name):
+    '''Удаляет данные'''
+    persons = read_data()
+    with open("data.txt", "w", encoding="utf8" ) as file:
+        for person in persons:
+            if name != person:
+                file.write(person) 
+
+def change_person(new_name, old_name):
+    '''Изменяет данные'''
+    persons = read_data()
+    with open("data.txt", "w", encoding="utf8" ) as file:
+        for person in persons:
+            if  old_name != person:
+                file.write(person)
+            else:
+                file.write(new_name + "\n")
